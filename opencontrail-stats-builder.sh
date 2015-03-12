@@ -7,7 +7,7 @@ done
 
 mkdir html
 
-for i in ls contrail*
+for i in $(ls contrail*)
 do
     gitinspector $i -F html > html/${i}.html
 done
