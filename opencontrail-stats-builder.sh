@@ -7,9 +7,9 @@ done
 
 mkdir html
 
-for i in $(ls contrail*)
+for i in $(ls | grep ^contrail-*)
 do
-    gitinspector $i -F html > html/${i}.html
+    gitinspector -F html ${i} > html/${i}.html
 done
 
 gitinspector contrail-* -F html > html/contrail.html
